@@ -1,14 +1,13 @@
 import {
   wxLogin
-} from 'utils/wxLogin'
+} from '@/utils/wxLogin'
 import {
   post, get
-} from 'network/http'
+} from '@/api/http'
 
 const actions = {
   loginAll(context, payload) {
     return new Promise((resolve, reject) => {
-
       if (isMobile()) {  //微信授权登录
         post('/api/v1/wxLogin?code=' + payload.code).then(res => {
           if (res.code == 200) {
@@ -33,7 +32,6 @@ const actions = {
             wxLogin()
             resolve(res)
           }
-
         }).catch(err => {
           reject(err)
         })

@@ -10,7 +10,7 @@ import {
 // 微信授权登录的方法
 import {
   wxLogin
-} from 'utils/wxLogin.js'
+} from '@/utils/wxLogin.js'
 // 引入路由
 import router from '../router/index'
 
