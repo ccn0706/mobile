@@ -38,6 +38,16 @@ const actions = {
       }
     })
   },
+  // 修改信息
+  updataInfo(context,payload){
+    return new Promise((resolve,reject)=>{
+      setTimeout(() => {
+        context.commit('updataInfos','lisi')
+        console.log(payload)
+        resolve('我是action返回回去的')
+      }, 1000);
+    })
+  }
 }
 export default actions
 

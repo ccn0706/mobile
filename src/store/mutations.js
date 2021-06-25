@@ -11,6 +11,21 @@ const mutations = {
       localStorage.removeItem('token')
     }
   },
+
+
+  // 加1
+  add(state){
+    state.num++
+  },
+  // 加10
+  add10(state,counter){
+    state.num+=counter
+  },
+  // 异步修改信息
+  updataInfos(state,payload){
+    console.log('111'+payload)
+    state.info.name=payload
+  }
 }
 
 export default mutations
